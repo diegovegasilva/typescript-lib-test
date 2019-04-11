@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+          content="ie=edge">
+    <title>Document</title>
+    <script src="_bundles/my-lib.js">
+    </script>
+    <script>
+        console.log('asdas');
+        const rest = new MyLib.RestApi({
+            apiRestUrl: 'https://jsonplaceholder.typicode.com',
+            activeLog: true,
+            xhrDebug: false
+        })
+
+        rest.getUsers().subscribe(data => console.log('data', data))
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
