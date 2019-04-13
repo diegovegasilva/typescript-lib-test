@@ -8,7 +8,6 @@ export class RestApi {
 
     private xrest: RestMethods;
     private mainUrl: string;
-    private languageId: number;
 
     constructor(private restApiOptions: restApiOptions) {
         this.xrest = new RestMethods(this.restApiOptions.activeLog || false, this.restApiOptions.xhrDebug || false);

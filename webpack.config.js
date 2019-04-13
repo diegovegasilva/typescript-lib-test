@@ -5,7 +5,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 var PATHS = {
   entryPoint: path.resolve(__dirname, 'src/index.ts'),
-  bundles: path.resolve(__dirname, '_bundles'),
+  bundles: path.resolve(__dirname, 'wbp'),
 }
 
 var config = {
@@ -57,7 +57,7 @@ var config = {
       use: [{
           loader: 'ts-loader',
           options: {
-
+            configFile : 'tsconfig.webpack.json' 
           }
       }],
       exclude: /node_modules/
