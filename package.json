@@ -12,7 +12,7 @@
     "author": "Diego Vega",
     "license": "MIT",
     "scripts": {
-        "roll-build": "npm run roll-clean && tsc --module commonjs && tsc --outDir dist/lib-es6 -m es6 && rollup -c rollup.config.ts -w",
+        "roll-build": "npm run roll-clean && tsc --module commonjs && tsc --outDir dist/lib-es6 -m es6 && rollup -c rollup.config.ts",
         "roll-clean": "shx rm -rf dist",
         "wbp-clean": "shx rm -rf wbp",
         "wbp-build": "npm run wbp-clean && tsc -p tsconfig.webpack.json --module commonjs && tsc -p tsconfig.webpack.json --outDir wbp/lib-es6 -m es6 && webpack",
