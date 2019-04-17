@@ -1,6 +1,6 @@
 {
     "name": "typescript-lib-test",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "description": "Example of TypeScript library setup for multiple compilation targets using tsc and webpack",
     "main": "dist/type-lib.umd.js",
     "module": "dist/type-lib.es5.js",
@@ -16,7 +16,7 @@
         "roll-clean": "shx rm -rf dist",
         "wbp-clean": "shx rm -rf wbp",
         "wbp-build": "npm run wbp-clean && tsc -p tsconfig.webpack.json --module commonjs && tsc -p tsconfig.webpack.json --outDir wbp/lib-es6 -m es6 && webpack",
-        "build" : "npm run wbp-build && npm run roll-build"
+        "build": "npm run wbp-build && npm run roll-build"
     },
     "dependencies": {
         "typescript": "^3.2.2",
