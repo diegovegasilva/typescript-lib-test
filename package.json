@@ -1,6 +1,6 @@
 {
     "name": "typescript-lib-test",
-    "version": "2.2.0",
+    "version": "2.2.1-0",
     "description": "Example of TypeScript library setup for multiple compilation targets using tsc and webpack",
     "main": "dist/type-lib.umd.js",
     "module": "dist/type-lib.es5.js",
