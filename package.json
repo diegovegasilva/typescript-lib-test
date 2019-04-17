@@ -19,7 +19,7 @@
         "build": "npm run wbp-build && npm run roll-build",
         "doc": "typedoc --out docs ./src",
         "preversion": "npm run doc",
-        "version": "npm run build && git add -A src && git add -A doc",
+        "version": "npm run build && git add -A src && git add -A docs",
         "postversion": "npm run wbp-clean"
     },
     "dependencies": {
