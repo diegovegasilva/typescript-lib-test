@@ -16,26 +16,31 @@
         "roll-clean": "shx rm -rf dist",
         "wbp-clean": "shx rm -rf wbp",
         "wbp-build": "npm run wbp-clean && tsc -p tsconfig.webpack.json --module commonjs && tsc -p tsconfig.webpack.json --outDir wbp/lib-es6 -m es6 && webpack",
-        "build" : "npm run wbp-build && npm run roll-build"
+        "build": "npm run wbp-build && npm run roll-build",
+        "doc": "typedoc --out docs ./src",
+        "preversion": "npm run doc",
+        "version": "npm run build && git add -A src && git add -A doc",
+        "postversion": "npm run wbp-clean"
     },
     "dependencies": {
         "typescript": "^3.2.2",
         "uglifyjs-webpack-plugin": "^2.1.2"
     },
     "devDependencies": {
-        "shx": "^0.2.2",
-        "ts-loader": "^5.3.3",
-        "webpack": "^4.28.4",
-        "webpack-cli": "^3.2.1",
-        "webpack-dev-server": "^3.1.14",
+        "lodash.camelcase": "^4.3.0",
         "rollup": "^0.67.0",
         "rollup-plugin-commonjs": "^9.1.8",
         "rollup-plugin-json": "^3.1.0",
         "rollup-plugin-node-resolve": "^3.4.0",
         "rollup-plugin-sourcemaps": "^0.4.2",
         "rollup-plugin-typescript2": "^0.18.0",
-        "lodash.camelcase": "^4.3.0",
-        "rxjs": "^6.3.3"
+        "rxjs": "^6.3.3",
+        "shx": "^0.2.2",
+        "ts-loader": "^5.3.3",
+        "typedoc": "^0.14.2",
+        "webpack": "^4.28.4",
+        "webpack-cli": "^3.2.1",
+        "webpack-dev-server": "^3.1.14"
     },
     "peerDependencies": {
         "rxjs": "^6.3.3"
