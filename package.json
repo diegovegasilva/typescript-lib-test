@@ -25,9 +25,10 @@
     },
     "dependencies": {
         "typescript": "^3.2.2",
-        "uglifyjs-webpack-plugin": "^2.1.2"
-    },
-    "devDependencies": {
+        "uglifyjs-webpack-plugin": "^2.1.2",
+        "shx": "^0.2.2",
+        "webpack": "^4.28.4",
+        "webpack-cli": "^3.2.1",
         "lodash.camelcase": "^4.3.0",
         "rollup": "^0.67.0",
         "rollup-plugin-commonjs": "^9.1.8",
@@ -35,12 +36,11 @@
         "rollup-plugin-node-resolve": "^3.4.0",
         "rollup-plugin-sourcemaps": "^0.4.2",
         "rollup-plugin-typescript2": "^0.18.0",
+        "ts-loader": "^5.3.3"
+    },
+    "devDependencies": {
         "rxjs": "^6.3.3",
-        "shx": "^0.2.2",
-        "ts-loader": "^5.3.3",
         "typedoc": "^0.14.2",
-        "webpack": "^4.28.4",
-        "webpack-cli": "^3.2.1",
         "webpack-dev-server": "^3.1.14"
     },
     "peerDependencies": {
