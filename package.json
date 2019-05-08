@@ -1,6 +1,6 @@
 {
     "name": "typescript-lib-test",
-    "version": "1.6.0",
+    "version": "1.2.0",
     "description": "Example of TypeScript library setup for multiple compilation targets using tsc and webpack",
     "main": "dist/type-lib.umd.js",
     "module": "dist/type-lib.es5.js",
@@ -21,8 +21,7 @@
         "preversion": "npm run doc",
         "version": "npm run build && git add -A src && git add -A docs",
         "postversion": "npm run wbp-clean",
-        "packageInstall": "npm install",
-        "postinstall": "npm run packageInstall && npm run build"
+        "postinstall" : "npm run build"
     },
     "dependencies": {
         "typescript": "^3.2.2",
@@ -43,6 +42,7 @@
         "webpack": "^4.28.4",
         "webpack-cli": "^3.2.1",
         "webpack-dev-server": "^3.1.14"
+
     },
     "peerDependencies": {
         "rxjs": "^6.3.3"
