@@ -20,7 +20,7 @@
         "doc": "typedoc --out docs ./src",
         "preversion": "npm run doc",
         "version": "npm run build && git add -A src && git add -A docs",
-        "prepare": "npm run build"
+        "prepare": "npm run build $INIT_CWD"
     },
     "dependencies": {
         "typescript": "^3.2.2",
